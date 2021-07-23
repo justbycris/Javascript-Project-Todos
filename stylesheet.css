@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #CAF4F3;
+    color: #1e1e1e;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 45px;
+    margin: 15px auto 25px auto;
+    text-align: center;
+}
+
+
+/*CONTAINER FOR TODOS  */
+
+.todos {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: row wrap;
+}
+
+.container {
+    display: block;
+    width: 400px;
+    min-height: 500px;
+    margin: 40px 25px;
+    text-align: center;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 13px 5px rgba(0, 0, 0, 0.09);
+    box-shadow: 0px 0px 13px 5px rgba(0, 0, 0, 0.09);
+    border-radius: 25px;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 15px auto 10px auto;
+    text-align: center;
+}
+
+
+/*NEW TODO - INPUT ENTRY */
+
+.center {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+.entry {
+    width: 300px;
+    height: 35px;
+    padding-left: 10px;
+    padding-right: 80px;
+    border-radius: 20px;
+    outline: none;
+    -webkit-box-shadow: 0px 0px 13px 5px rgba(0, 0, 0, 0.09);
+    box-shadow: 0px 0px 13px 5px rgba(0, 0, 0, 0.09);
+    border: none;
+}
+
+.entry:placeholder-shown {
+    color: #1e1e1e;
+    content: "Create a new todo...";
+}
+
+.add-btn {
+    margin-left: -50px;
+    height: 35px;
+    width: 90px;
+    background: #0065CC;
+    color: white;
+    border: 0;
+    -webkit-appearance: none;
+    border-radius: 0 20px 20px 0;
+}
+
+.errorMessage {
+    font-size: 14px;
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.new-tasks {
+    display: block;
+    width: 400px;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 15px 20px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 13px 5px rgba(0, 0, 0, 0.09);
+    box-shadow: 0px 0px 13px 5px rgba(0, 0, 0, 0.09);
+    height: 500px;
+}
+
+.container ul {
+    text-align: left;
+    position: relative;
+    width: 100%;
+    padding: 5px 15px;
+    margin: 0 auto;
+}
+
+.container ul li {
+    text-align: left;
+    margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.new-todo {
+    position: relative;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1e1e1e;
+    width: 100%;
+    list-style: none;
+    vertical-align: baseline;
+    display: flex;
+    justify-content: space-around;
+}
+
+.completed-todo {
+    position: relative;
+    text-decoration: line-through;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1e1e1e;
+    list-style: none;
+    vertical-align: baseline;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+
+/* TODOS CHECKBOX */
+
+.toggle {
+    position: absolute;
+    top: 0;
+    width: 23px;
+    height: 23px;
+    border-radius: 15px;
+    right: 0;
+}
+
+.toggle>input[type="checkbox"] {
+    display: none;
+}
+
+.toggle>label>input[type="checkbox"]+*::before {
+    content: "";
+    display: inline-block;
+    vertical-align: bottom;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 10%;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: gray;
+}
+
+.toggle>label>input[type="checkbox"]:checked+*::before {
+    content: "✓";
+    color: white;
+    text-align: center;
+    background: teal;
+    border-color: teal;
+}
+
+.toggle>label>input[type="checkbox"]:checked+* {
+    color: teal;
+}
+
+
+/* .todo-label {
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    border: 1px solid gray;
+    width: 23px;
+    height: 23px;
+    border-radius: 15px;
+    right: 0;
+    background-color: pink;
+}
+
+.todo-label:after {
+    content: "✓";
+    background-color: blue;
+    color: white;
+}
+
+.todo-label:hover {
+    background-color: rgb(173, 250, 173);
+} */
+
+
+/* FOOTER */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.date {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: center;
+}

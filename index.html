@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+
+    <h1>Task Board</h1>
+    <section class="center">
+        <!--NEW TASK ENTRY-->
+        <input type="text" id="tasks" class="entry" required>
+        <input type="submit" id="add-btn" class="add-btn">
+        <p id="error" class="errorMessage"></p>
+    </section>
+
+    <!--TODO AND COMPLETED CONTAINERS-->
+    <section class="todos">
+        <div class="container">
+            <h2>Todo</h2>
+            <ul id="tasks-list" class="new-todos"></ul>
+        </div>
+        <div class="container">
+            <h2>Completed</h2>
+            <ul id="completed-list" class="completed"></ul>
+        </div>
+    </section>
+
+
+    <footer>
+        <div id="todays-date" class="date"></div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
