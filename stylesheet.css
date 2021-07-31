@@ -51,6 +51,12 @@ h2 {
     border-radius: 25px;
 }
 
+.todo-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 
 /*NEW TODO - INPUT ENTRY */
 
@@ -132,9 +138,7 @@ h2 {
     color: #1e1e1e;
     width: 100%;
     list-style: none;
-    vertical-align: baseline;
-    display: flex;
-    justify-content: space-around;
+    display: block;
 }
 
 .completed-todo {
@@ -160,7 +164,7 @@ h2 {
     position: relative;
     width: 16px;
     height: 16px;
-    margin: 0;
+    margin: 0 10px 0 0;
     display: inline-block;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -204,6 +208,8 @@ h2 {
     position: absolute;
     top: 0px;
     opacity: 1;
+    width: 16px;
+    height: 16px;
     left: 0px;
     border: 1px solid #0485FE;
     border-radius: 50px;
