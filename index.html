@@ -13,10 +13,10 @@
 
 
     <section class="center">
-        <h1>Task Board</h1>
+        <h1>Todo List</h1>
         <!--NEW TASK ENTRY-->
-        <input type="text" id="tasks" class="entry" required placeholder="Add Task...">
-        <input type="submit" id="add-btn" class="add-btn">
+        <input type="text" id="tasks" class="entry" required placeholder="New Todo...">
+        <input type="submit" id="add-btn" class="add-btn" value="Add">
         <p id="error" class="errorMessage"></p>
     </section>
 
@@ -27,6 +27,7 @@
         <div class="container">
             <h2>Todo</h2>
             <ul id="tasks-list" class="new-todos"></ul>
+
         </div>
 
         <div class="container">
@@ -35,11 +36,12 @@
         </div>
 
     </section>
+    <button class="clear-btn">Clear all</button>
 
 
-    <footer>
-        <div id="todays-date" class="date"></div>
-    </footer>
+
+    <div id="todays-date" class="date"></div>
+
     <script src="app.js"></script>
 </body>
 

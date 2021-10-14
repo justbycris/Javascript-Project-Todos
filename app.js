@@ -5,12 +5,40 @@ var errorMessage = document.getElementById("error");
 var checkbox = document.getElementById("checkbox");
 var label = document.getElementById("label");
 var completedTodos = document.getElementById("completed-list");
-
-
-
+var clearBTN = document.querySelector(".clear-btn");
 
 
 addTodo.addEventListener("click", createTodo);
+addTodo.addEventListener("click", savedTodos);
+
+//LOCAL STORAGE
+// addTodo.addEventListener("click", (e) => {
+//     localStorage.setItem('myKey', JSON.stringify(enterTodo.value));
+// })
+
+
+
+function savedTodos() {
+    // Put the object into storage
+    var enterTodo = document.getElementById("tasks").value;
+    var allTasks = JSON.parse(localStorage.getItem("allTasks")) || [];
+    allTasks.push(enterTodo);
+    localStorage.setItem("allTasks", JSON.stringify(allTasks));
+}
+
+clearBTN.addEventListener("click", () => {
+    tasksList.innerHTML = "";
+    completedTodos.innerHTML = "";
+})
+
+
+
+
+
+// Retrieve the object from storage
+// var retrievedObject = localStorage.getItem('testObject');
+
+// console.log('retrievedObject: ', JSON.parse(retrievedObject));
 
 
 function createTodo() {
